@@ -1,11 +1,18 @@
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+
+  background-color: white;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.nav-left{
+.nav-left {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,15 +32,15 @@
   gap: 20px;
 }
 
-.logo{
-  font-family: 'Poppins', sans-serif;
+.logo {
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 600;
-  color: #F8748B;
+  color: #f8748b;
 }
 
-.nav-link{
-  font-family: 'Poppins', sans-serif;
+.nav-link {
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #333;
@@ -41,11 +48,104 @@
 }
 
 .nav-link:hover {
-  color: #FF8BA7;
+  color: #ff8ba7;
   text-decoration: underline;
 }
 
 .nav-link.active {
-  color: #F8748B;
+  color: #f8748b;
   text-decoration: underline;
+}
+
+.button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d5cbcd72;
+  color: black;
+  cursor: pointer;
+}
+
+.button.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* Hide hamburger on desktop */
+.mobile-menu-button {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide nav links on mobile by default */
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  gap: 300px;
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block; /* show hamburger */
+  }
+
+  .nav-menu {
+    display: none; /* hide */
+    flex-direction: column;
+    gap: 20px;
+    position: absolute; /* dropdown below navbar */
+    top: 60px; /* adjust based on navbar height */
+    right: 0;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+    width: auto;
+  }
+
+  /* Show when open */
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-middle,
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cart {
+    bottom: 10px;
+  }
 }
