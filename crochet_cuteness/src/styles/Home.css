@@ -1,0 +1,94 @@
+.button {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #f43f5f;
+  border: 1px solid #f43f5f;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+}
+
+.button.active {
+  background-color: #f43f5f;
+  color: white;
+  border-color: transparent;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #f5788e8f;
+  color: black;
+}
+
+.home-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 500px;
+  text-align: 'center'
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+     align-items: center;
+  }
+
+  
+}
+@media (max-width: 768px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .home-text {
+    text-align: left;
+    width: 400px;
+  }
+}

@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.jsx";
 import {Outlet} from "react-router-dom";
 
 export default function Layout() {
@@ -6,7 +6,7 @@ export default function Layout() {
     <>
       <Navbar />
       <main>
-        <Outlet /> {/* Renders the matched child route component here */}
+        <Outlet /> 
       </main>
     </>
   )
