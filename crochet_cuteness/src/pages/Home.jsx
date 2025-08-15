@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#FFF0F2", padding: "60px" }}>
+      <div style={{ backgroundColor: "#FFF0F2", padding: "150px",position: "relative" }}>
         <div className="home-container">
           <div className="home-left">
             <div
@@ -125,20 +125,25 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <img src='/circle.svg' className='circle'/>
+
       <div
         style={{
-          backgroundColor: "white",
-          borderWidth: "1px",
-          borderColor: "white",
-          borderStyle: "solid",
-          borderTopLeftRadius: "100%",
-          borderTopRightRadius: "100%",
+          backgroundColor: "white",  
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          zIndex: 100,
+          position: 'relative'
         }}
       >
-        <p>hi</p>
+        <p className='home-small'>Our Story</p>
+       <div className="home-line">
+         <p classNmae='home-lineTitles'>About Crochet Cuteness</p>
+         <p className='home-lineParagraph'>Handcrafted with love, bringing joy through every stitch</p>
+       </div>
       </div>
     </>
   );
