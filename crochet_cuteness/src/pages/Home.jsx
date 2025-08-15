@@ -6,7 +6,13 @@ export default function Home() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#FFF0F2", padding: "150px",position: "relative" }}>
+      <div
+        style={{
+          backgroundColor: "#FFF0F2",
+          padding: "150px",
+          position: "relative",
+        }}
+      >
         <div className="home-container">
           <div className="home-left">
             <div
@@ -126,24 +132,53 @@ export default function Home() {
         </div>
       </div>
 
-      <img src='/circle.svg' className='circle'/>
+      <img src="/circle.svg" className="circle" />
 
       <div
         style={{
-          backgroundColor: "white",  
+          backgroundColor: "white",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           zIndex: 100,
-          position: 'relative'
+          position: "relative",
         }}
       >
-        <p className='home-small'>Our Story</p>
-       <div className="home-line">
-         <p classNmae='home-lineTitles'>About Crochet Cuteness</p>
-         <p className='home-lineParagraph'>Handcrafted with love, bringing joy through every stitch</p>
-       </div>
+        <div className="home-bigdiv">
+          {" "}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+             
+            }}
+          >
+            <p className="home-small">Our Story</p>
+            <div className="home-line">
+              <p className="home">About Crochet Cuteness</p>
+              <p className="home-lineParagraph">
+                Handcrafted with love, bringing joy through every stitch
+              </p>
+            </div>
+          </div>
+          <div className="home-div">
+            <p className="home-paragraph">
+              Crochet Cuteness was born from a passion for creating beautiful,
+              handcrafted items that bring warmth and joy to homes around the
+              world. What Started as a hobby has blossomed into a community of
+              crochet enthusiasts sharing their love for this timeless craft.
+            </p>
+            <p className="home-paragraph">
+              We believe in the magic of handmade items - each piece tells a
+              story and carries the care and attention of its creator. Our
+              mission is to share the art of crochet through high-quality
+              products, patterns, and a supportive community where creators can
+              showcase their talents.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
