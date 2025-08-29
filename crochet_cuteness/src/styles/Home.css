@@ -13,7 +13,6 @@
 
 p {
   font-family: "Poppins", sans-serif;
-  
 }
 
 .button.active {
@@ -40,7 +39,6 @@ p {
   flex-direction: row;
   justify-content: center;
   gap: 100px;
-  
 }
 
 .home-title {
@@ -48,7 +46,6 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  
 }
 
 .home-text {
@@ -56,17 +53,17 @@ p {
   flex-direction: column;
   gap: 12px;
   width: 500px;
-  text-align: 'center'
+  text-align: "center";
 }
 
-.home-small{
+.home-small {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 9px;
-  background-color: #FCE2E5;
-  color: #F43F5F;
+  background-color: #fce2e5;
+  color: #f43f5f;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 13px;
@@ -74,15 +71,15 @@ p {
   text-align: center;
 }
 
-.circle{
+.circle {
   position: absolute;
-    top: 700px;
-    width: 100%;
-    height: 315px;
-    z-index: 0;
+  top: 700px;
+  width: 100%;
+  height: 315px;
+  z-index: 0;
 }
 
-.home-line{
+.home-line {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,14 +87,14 @@ p {
   gap: 8px;
 }
 
-.home-lineParagraph{
-  font-family: 'Poppins', sans-serif;
+.home-lineParagraph {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #676767;
 }
 
-.home{
+.home {
   font-weight: 600;
   font-size: 40px;
 }
@@ -110,8 +107,8 @@ p {
   gap: 20px;
 }
 
-.home-paragraph{
-  font-family: 'Inter', sans-serif;
+.home-paragraph {
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   text-align: center;
   width: 850px;
@@ -125,16 +122,98 @@ p {
   gap: 32px;
 }
 
+.home-stuffs {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.home-stuff {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.home-stuff-description {
+  color: #676767;
+  width: 234px;
+}
+
+.home-stuff-label {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.home-stuff-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-commitment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 100px;
+}
+
+.home-commitment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 500px;
+}
+
+.home-commitment-title {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.home-commitment-paragraph {
+  color: #676767;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.home-commitment-image{
+  width: 530px;
+  height: 519px;
+}
+
 @media (max-width: 1024px) {
+  
+  .home-commitment-paragraph{
+    max-width: 400px;
+  }
+
+  .home-commitment-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-stuffs {
+    grid-template-columns: auto auto;
+    gap: 24px;
+  }
+
   .home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-     align-items: center;
+    align-items: center;
   }
 
-  .circle{
+  .circle {
     top: 1100px;
   }
 
@@ -143,6 +222,24 @@ p {
   }
 }
 @media (max-width: 768px) {
+
+  .home-commitment-paragraph{
+    max-width: 500px;
+  }
+
+  .home-commitment {
+    flex-direction: column;
+  }
+
+  .home-commitment-image {
+    width: 500px;
+    height: 500px;
+  }
+  .home-stuffs {
+    grid-template-columns: auto;
+    gap: 32px;
+  }
+
   .home-container {
     display: flex;
     flex-direction: column;
@@ -169,7 +266,7 @@ p {
     width: 400px;
   }
 
-  .circle{
+  .circle {
     top: 1150px;
   }
 

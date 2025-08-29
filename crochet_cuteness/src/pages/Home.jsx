@@ -4,6 +4,37 @@ import { useState } from "react";
 export default function Home() {
   const [activeButton, setActiveButton] = useState(null);
 
+  const stuff = [
+    {
+      id: 1,
+      label: "Quality Craftsmanship",
+      image: "/craft.svg",
+      description:
+        "Every item is crafted using the best yarns and sustainable practices.",
+    },
+    {
+      id: 2,
+      label: "Made with Love",
+      image: "/love.svg",
+      description:
+        "Each stitch is created with care, bringing warmth and character to every piece.",
+    },
+    {
+      id: 3,
+      label: "Unique Designs",
+      image: "/star.svg",
+      description:
+        "Our patterns and products feature original designs you won’t find anywhere else.",
+    },
+    {
+      id: 4,
+      label: "Creator Community",
+      image: "/people.svg",
+      description:
+        "We support a community of crochet artist who share their passion and expertise.",
+    },
+  ];
+
   return (
     <>
       <div
@@ -152,7 +183,6 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-             
             }}
           >
             <p className="home-small">Our Story</p>
@@ -178,6 +208,49 @@ export default function Home() {
               showcase their talents.
             </p>
           </div>
+        </div>
+
+        <div className="home-stuffs">
+          {stuff.map((item) => (
+            <div className="home-stuff">
+              <div
+                style={{
+                  backgroundColor: "#FFF0F2",
+                  borderRadius: "100px",
+                  padding: "20px",
+                }}
+              >
+                <img src={item.image} />
+              </div>
+              <div className="home-stuff-text">
+                <p className="home-stuff-label">{item.label}</p>
+                <p className="home-stuff-description">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className='home-commitment'>
+          <img src="/pic.svg" className='home-commitment-image'/>
+          <div className='home-commitment-text'>
+            <p className='home-commitment-title'>Our Commitment</p>
+            <p className='home-commitment-paragraph'>
+              At CrochetCuteness, we're committed to preserving and promoting
+              the art of crochet. We believe in creating products that are not
+              only beautiful but also sustainable and ethically made. We work
+              with talented creators from around the world, providing a platform
+              for them to share their designs and connect with crochet
+              enthusiasts. Whether you're looking for a finished product, a
+              pattern to create your own, or inspiration for your next project,
+              we're here to support your crochet journey. Join our community and
+              discover the joy of handmade crochet items that add warmth,
+              character, and charm to everyday life.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p className="home-small">Our Best Products</p>
         </div>
       </div>
     </>
