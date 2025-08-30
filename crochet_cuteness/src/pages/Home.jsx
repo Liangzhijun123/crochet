@@ -1,8 +1,15 @@
 import "../styles/Home.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [activeButton, setActiveButton] = useState(null);
+  const [dada, setData] = useState({ BestSellers: [] });
+
+  useEffect(() => {
+    fetch("/products/products.json")
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  }, []);
 
   const stuff = [
     {
@@ -230,11 +237,11 @@ export default function Home() {
           ))}
         </div>
 
-        <div className='home-commitment'>
-          <img src="/pic.svg" className='home-commitment-image'/>
-          <div className='home-commitment-text'>
-            <p className='home-commitment-title'>Our Commitment</p>
-            <p className='home-commitment-paragraph'>
+        <div className="home-commitment">
+          <img src="/pic.svg" className="home-commitment-image" />
+          <div className="home-commitment-text">
+            <p className="home-commitment-title">Our Commitment</p>
+            <p className="home-commitment-paragraph">
               At CrochetCuteness, we're committed to preserving and promoting
               the art of crochet. We believe in creating products that are not
               only beautiful but also sustainable and ethically made. We work
@@ -249,8 +256,66 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <p className="home-small">Our Best Products</p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingBottom: "100px",
+          }}
+        >
+          <div className="home-line">
+            <p className="home-small">Our Best Products</p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <p className="home-line-title">Bestselling Products</p>
+              <p className="home-line-para">
+                Our most popular handcrafted crochet items
+              </p>
+            </div>
+          </div>
+
+          <div className="home-products">
+            {dada.BestSellers.map((product) => (
+              <div
+                key={product.id}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                  alignItems: "center",
+                }}
+              >
+                <div>
+                  <img src={product.image} className="home-product-image" />
+                  <button
+                    style={{
+                      borderRadius: "100%",
+                      borderWidth: 1,
+                      borderColor: "#989898",
+                      backgroundColor: "#9898985e",
+                      alignItems: "center",
+                      position: 'absolute',
+                      top: '0',
+                      right: '0',
+                      zIndex: 10
+                    }}
+                  >
+                    <img
+                      src="/unfillHeart.png"
+                      style={{ width: 15, height: 14 }}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

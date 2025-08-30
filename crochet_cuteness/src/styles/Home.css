@@ -189,6 +189,40 @@ p {
   height: 519px;
 }
 
+.home-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-line-title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.home-line-para {
+  font-weight: 200;
+  font-size: 20px;
+  color: #676767;
+}
+
+.home-products{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 100px;
+}
+
+.home-product-image{
+  width: 351px;
+  height: 393px;
+  position: relative;
+}
+
 @media (max-width: 1024px) {
   
   .home-commitment-paragraph{

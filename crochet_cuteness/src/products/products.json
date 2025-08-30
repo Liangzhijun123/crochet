@@ -1,0 +1,31 @@
+{
+  "BestSellers": [
+    {
+      "id": 1,
+     "name": "Alex",
+     "price" : 40,
+     "plushie_name" : "Alex the Alligator",
+     "image": "/plushie.svg",
+     "profile": "/profile.svg",
+     "stock": "Stock Available"
+    },
+    {
+      "id": 2,
+     "name": "Alex",
+     "price" : 40,
+     "plushie_name" : "Alex the Alligator",
+     "image": "/plushie.svg",
+     "profile": "/profile.svg",
+     "stock": "Stock Available"
+    },
+    {
+      "id": 3,
+     "name": "Alex",
+     "price" : 40,
+     "plushie_name" : "Alex the Alligator",
+     "image": "/plushie.svg",
+     "profile": "/profile.svg",
+     "stock": "Stock Available"
+    }
+  ]
+}
